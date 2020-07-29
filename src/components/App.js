@@ -20,8 +20,8 @@ const GlobalStyle = createGlobalStyle`
   .white {
     color: ${theme.colors.white};
   }
-  .darkgrey {
-    color: ${theme.colors.darkgrey};
+  .dark {
+    color: ${theme.colors.dark};
   }
   .red {
     color: ${theme.colors.red};

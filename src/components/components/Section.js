@@ -9,13 +9,13 @@ const Section = (props) => {
     <div className={className}>
       <h2>
         {name}
-        <span className='slate'>{" {"}</span>
+        <span className='dark'>{" {"}</span>
       </h2>
       <div className='container'>
         {render()}
       </div>
       <h2>
-        <span className='slate'>{"}"}</span>
+        <span className='dark'>{"}"}</span>
       </h2>
     </div>
   );

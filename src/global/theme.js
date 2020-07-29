@@ -10,6 +10,7 @@ const theme = {
     aqua: '#8be9fd',
     grey: '#ABB2BF',
     slate: '#686a73',
+    dark: '#44475a',
     white: '#f8f8f2',
     // ddsdddddddddd
   }

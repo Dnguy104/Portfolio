@@ -44,6 +44,17 @@ Header.propTypes = {
 };
 
 const styledHeader = styled(Header)`
+  /* @media only screen and (min-width: 850px) {
+    .links{
+      display: block;
+    }
+  }
+  @media only screen and (max-width: 850px) {
+    .links{
+      display: none;
+    }
+  } */
+
   h1 {
     font-size: 36px;
     color: ${theme.colors.aqua};

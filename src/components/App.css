@@ -10,6 +10,7 @@ body, h1, h2, h3, h4, h5, h6, p {
 
 body {
   height: 100vh;
+  width:100vw;
   font-family: Inconsolata;
   background-color: rgb(40,44,54);
   overflow: auto;
@@ -17,7 +18,7 @@ body {
 
 #app {
   height: auto;
-  width:auto;
+  width:100%;
   padding-top: 20px;
   padding-bottom: 50px;
   display: flex;

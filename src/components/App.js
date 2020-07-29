@@ -24,6 +24,12 @@ const GlobalStyle = createGlobalStyle`
   .red {
     color: ${theme.colors.red};
   }
+  .slate {
+    color: ${theme.colors.slate};
+  }
+  .green {
+    color: ${theme.colors.green};
+  }
 
   p {
     color: ${theme.colors.grey};
@@ -36,8 +42,9 @@ const App = (props) => {
 
   const renderAbout = () => {
     return (
-      <p>
-        {"\""}
+      <p className='about'>
+        <span className='green'>"I am a Full-Stack Developer with a deep passion for creating software and data systems.
+        I am always looking for the next big thing to build!"</span>
       </p>
     );
   }
@@ -61,15 +68,30 @@ const App = (props) => {
     return jobs;
   }
 
+  const renderSkills = () => {
+    const jobs = data.skills.map((skill, i) => {
+      return (
+        <div key={skill[0]+i} className='skills'>
+          <p>
+            <span className='red'>{skill[0]}</span>
+            <span className='aqua'>: </span>
+          </p>
+          <p>
+            <span className=''>{skill[1]}</span>
+          </p>
+        </div>
+      );
+    })
+
+    return jobs;
+  }
+
   return (
     <div className={className}>
       <GlobalStyle />
       <Header/>
       <Section name='About' render={()=>renderAbout()}/>
-
-      <h2>{"Skills {"}</h2>
-
-      <h2>{"}"}</h2>
+      <Section name='Skills' render={()=>renderSkills()}/>
       <Section name='Experience' render={()=>renderExperience()}/>
       <h2>{"Projects {"}</h2>
       <h2>{"}"}</h2>
@@ -83,12 +105,25 @@ App.propTypes = {
 
 const styledApp = styled(App)`
   height: 100%;
-  width: 640px;
+  width: 800px;
   h2 {
     font-size: 27px;
     color: ${theme.colors.white};
-    padding: 10px 0px;
+  }
+  .skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    p:first-of-type {
+      padding-right: 15px;
 
+    }
+    p {
+      line-height: 1.2;
+    }
+  }
+  .about {
+    padding: 10px 15px;
   }
 
   .item {

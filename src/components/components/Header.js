@@ -29,6 +29,11 @@ const Header = (props) => {
           <span className='pink'>()</span>
           <span className='grey'>;</span>
         </a>
+        <a href="">
+          <span className='aqua'>Resume</span>
+          <span className='pink'>()</span>
+          <span className='grey'>;</span>
+        </a>
       </div>
     </div>
   );

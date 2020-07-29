@@ -9,7 +9,7 @@ const theme = {
     purple: '#bd93f9',
     aqua: '#8be9fd',
     grey: '#ABB2BF',
-    darkgrey: '#75715E',
+    slate: '#44475a',
     white: '#f8f8f2',
   }
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import './App.css'
 import { Header, Title, Section } from './components';
 import theme from '../global/theme.js';
@@ -34,22 +34,23 @@ const GlobalStyle = createGlobalStyle`
   p {
     color: ${theme.colors.grey};
     font-size: 18px;
+    line-height: 1.2;
   }
 `;
 
 const App = (props) => {
   const { className } = props;
 
-  const renderAbout = () => {
+  const renderAbout = useCallback(() => {
     return (
       <p className='about'>
-        <span className='green'>"I am a Full-Stack Developer with a deep passion for creating software and data systems.
+        <span className='green'>"I am a Full-Stack Developer based in the Bay Area with a deep passion for creating software and data systems.
         I am always looking for the next big thing to build!"</span>
       </p>
     );
-  }
+  });
 
-  const renderExperience = () => {
+  const renderExperience = useCallback(() => {
     const jobs =  data.experience.map((job, i) => {
       return (
         <div className='item' key={i+'current'}>
@@ -66,9 +67,9 @@ const App = (props) => {
     })
 
     return jobs;
-  }
+  });
 
-  const renderSkills = () => {
+  const renderSkills = useCallback(() => {
     const jobs = data.skills.map((skill, i) => {
       return (
         <div key={skill[0]+i} className='skills'>
@@ -84,7 +85,35 @@ const App = (props) => {
     })
 
     return jobs;
-  }
+  });
+
+  const renderProjects = useCallback(() => {
+    const jobs = data.projects.map((project, i) => {
+      return (
+        <div key={i+'projects'} className='projects'>
+          <a href={project.link}>
+            <p>
+              <span className='aqua'>{project.name}</span>
+              {project.hasOwnProperty('award') ?
+                <>
+                  <span className='grey'> - </span>
+                  <span className='pink'>{project.award}</span>
+                </> :
+                null
+              }
+            </p>
+          </a>
+          {project.description.map((line, i)=>(
+            <p key={i+'line'}>
+              <span className='slate'>{"// "}{line}</span>
+            </p>
+          ))}
+        </div>
+      );
+    })
+
+    return jobs;
+  });
 
   return (
     <div className={className}>
@@ -93,8 +122,7 @@ const App = (props) => {
       <Section name='About' render={()=>renderAbout()}/>
       <Section name='Skills' render={()=>renderSkills()}/>
       <Section name='Experience' render={()=>renderExperience()}/>
-      <h2>{"Projects {"}</h2>
-      <h2>{"}"}</h2>
+      <Section name='Projects' render={()=>(renderProjects())}/>
     </div>
   );
 }
@@ -105,7 +133,7 @@ App.propTypes = {
 
 const styledApp = styled(App)`
   height: 100%;
-  width: 800px;
+  width: 850px;
   h2 {
     font-size: 27px;
     color: ${theme.colors.white};
@@ -118,13 +146,28 @@ const styledApp = styled(App)`
       padding-right: 15px;
 
     }
-    p {
-      line-height: 1.2;
-    }
+    padding: 10px 0px 10px 15px;
   }
+
   .about {
     padding: 10px 15px;
   }
+
+  .projects {
+
+    a > p {
+      :hover {
+        background-color: rgba(100,100,100, 0.5);
+      }
+      padding: 5px 0px 5px 15px;
+    }
+    p {
+      padding-left: 15px;
+    }
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
 
   .item {
     :hover {
@@ -134,6 +177,7 @@ const styledApp = styled(App)`
       content: '-';
       padding-right: 10px;
     }
+    padding: 10px 0px 10px 15px;
   }
 
 `;

@@ -27,10 +27,7 @@ Section.propTypes = {
 
 const styledSection = styled(Section)`
   padding: 10px 0px;
-  .container {
-    div {
-      padding: 10px;
-    }
+
   }
   h2:first-of-type {
     padding-bottom: 10px;

@@ -9,8 +9,9 @@ const theme = {
     purple: '#bd93f9',
     aqua: '#8be9fd',
     grey: '#ABB2BF',
-    slate: '#44475a',
+    slate: '#686a73',
     white: '#f8f8f2',
+    // ddsdddddddddd
   }
 };
 

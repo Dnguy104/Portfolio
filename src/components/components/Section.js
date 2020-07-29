@@ -26,7 +26,7 @@ Section.propTypes = {
 };
 
 const styledSection = styled(Section)`
-  padding: 10px 0px;
+  padding: 20px 0px;
 
   }
   h2:first-of-type {

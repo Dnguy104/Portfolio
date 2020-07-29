@@ -44,25 +44,31 @@ Header.propTypes = {
 };
 
 const styledHeader = styled(Header)`
-  /* @media only screen and (min-width: 850px) {
-    .links{
-      display: block;
+  @media only screen and (min-width: 850px) {
+    h1 {
+      font-size: 36px;
+    }
+    a {
+      margin-right: 30px;
     }
   }
   @media only screen and (max-width: 850px) {
-    .links{
-      display: none;
+    h1 {
+      font-size: 24px;
     }
-  } */
+
+    a {
+      margin-right: 10px;
+    }
+  }
 
   h1 {
-    font-size: 36px;
     color: ${theme.colors.aqua};
     padding-bottom: 15px;
   }
 
   a {
-    margin-right: 30px;
+    display: inline-block;
     padding-bottom: 1px;
     text-decoration: none;
     :hover {
@@ -73,6 +79,7 @@ const styledHeader = styled(Header)`
 
   .links {
     padding-bottom: 15px;
+    width: 100%;
   }
 `;
 

@@ -10,7 +10,7 @@ body, h1, h2, h3, h4, h5, h6, p {
 
 body {
   height: 100vh;
-  width:100vw;
+  width:100%;
   font-family: Inconsolata;
   background-color: rgb(40,44,54);
   overflow: auto;

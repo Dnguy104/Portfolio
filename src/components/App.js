@@ -37,6 +37,9 @@ const GlobalStyle = createGlobalStyle`
     color: ${theme.colors.grey};
     font-size: 18px;
     line-height: 1.2;
+    @media only screen and (max-width: 760px) {
+      font-size: 30px;
+    }
   }
 
 `;
@@ -140,15 +143,20 @@ App.propTypes = {
 
 const styledApp = styled(App)`
   height: 100%;
+  width: 100%;
   box-sizing: border-box;
   @media only screen and (min-width: 900px) {
       width: 850px;
   }
 
-  @media only screen and (max-width: 850px) {
-      width: 100%;
+  @media only screen and (max-width: 900px) {
       padding-left: 15px;
       padding-right: 15px;
+      width: 100%;
+
+      p {
+        font-size: 30px;
+      }
   }
 
   h2 {

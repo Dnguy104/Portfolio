@@ -5,6 +5,8 @@ import theme from '../global/theme.js';
 import data from '../global/Data.js';
 import styled, { createGlobalStyle } from 'styled-components';
 
+// git subtree push --prefix dist origin gh-pages
+
 const GlobalStyle = createGlobalStyle`
   .pink {
     color: ${theme.colors.pink};
@@ -36,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 18px;
     line-height: 1.2;
   }
+
 `;
 
 const App = (props) => {
@@ -133,7 +136,17 @@ App.propTypes = {
 
 const styledApp = styled(App)`
   height: 100%;
-  width: 850px;
+  box-sizing: border-box;
+  @media only screen and (min-width: 900px) {
+      width: 850px;
+  }
+
+  @media only screen and (max-width: 850px) {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+
   h2 {
     font-size: 27px;
     color: ${theme.colors.white};

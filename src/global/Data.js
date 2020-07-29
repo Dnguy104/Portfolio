@@ -24,6 +24,7 @@ const data = {
   projects: [
     {
       name: 'Dropp.It',
+      hot: true,
       link: 'https://github.com/Dnguy104/Dropp.it--Reddit-Clone',
       description: ['Fullstack Community Content Forum Appliication', 'Users can create accounts, create forums, post, comment, vote, and more!']
     },

@@ -95,6 +95,10 @@ const App = (props) => {
       return (
         <div key={i+'projects'} className='projects'>
           <a href={project.link}>
+            {!!project.hot ?
+              <div className='hot'></div> :
+              null
+            }
             <p>
               <span className='aqua'>{project.name}</span>
               {project.hasOwnProperty('award') ?
@@ -167,7 +171,10 @@ const styledApp = styled(App)`
   }
 
   .projects {
-
+    a {
+      text-decoration: none;
+      position: relative;
+    }
     a > p {
       :hover {
         background-color: rgba(100,100,100, 0.5);
@@ -193,6 +200,17 @@ const styledApp = styled(App)`
     padding: 10px 0px 10px 15px;
   }
 
+  .hot {
+    position: absolute;
+    top: 11px;
+    left: -15px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+
+    border-left: 7px solid ${theme.colors.pink};
+  }
 `;
 
 export default styledApp;

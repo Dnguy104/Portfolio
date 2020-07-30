@@ -71,6 +71,7 @@ const styledHeader = styled(Header)`
     display: inline-block;
     padding-bottom: 1px;
     text-decoration: none;
+    border-bottom: 1px solid transparent;
     :hover {
       border-bottom: 1px solid ${theme.colors.grey};
 

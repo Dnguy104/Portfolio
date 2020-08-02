@@ -44,6 +44,12 @@ const data = {
       description: ['Utilized the IBM IoT platform to gather and display real-time location data from',
       'hundreds of devices to help event planners visualize bottlenecks and assist in', 'crowd control.']
     },
+    {
+      name: 'Imfur​',
+      link: 'https://github.com/Dnguy104/Imfur',
+      description: ['An image search engine using Imgur api. It provides a search bar and query sorts to make filtered queries.',
+      'The images are also disply in a grid pattern that supports dynamic height to improve viewing experience']
+    }
   ],
   skills: [
     ['Frontend', 'Javascript, ES6/7, React.js, Styled-Components, Redux, React Native, Html5, CSS3, Jest/Enzyme, apollo client'],

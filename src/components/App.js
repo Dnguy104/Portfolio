@@ -47,7 +47,7 @@ const App = (props) => {
   const renderAbout = useCallback(() => {
     return (
       <p className='about'>
-        <span className='green'>"I am a Full-Stack Developer based in the Bay Area with a deep passion for creating software and data systems.
+        <span className='grey'>"I am a Full-Stack Developer based in the Bay Area with a deep passion for creating software and data systems.
         I am always looking for the next big thing to build!"</span>
       </p>
     );
@@ -104,7 +104,7 @@ const App = (props) => {
               {project.hasOwnProperty('award') ?
                 <>
                   <span className='grey'> - </span>
-                  <span className='pink'>{project.award}</span>
+                  <span className='red'>{project.award}</span>
                 </> :
                 null
               }
@@ -210,7 +210,7 @@ const styledApp = styled(App)`
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
 
-    border-left: 7px solid ${theme.colors.pink};
+    border-left: 7px solid ${theme.colors.red};
   }
 `;
 

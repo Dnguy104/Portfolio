@@ -11,27 +11,27 @@ const Header = (props) => {
       <div className='links'>
         <a href="mailto:danielnguyen44@gmail.com">
           <span className='aqua'>Email</span>
-          <span className='pink'>()</span>
+          <span className='red'>()</span>
           <span className='grey'>;</span>
         </a>
         <a href="https://github.com/Dnguy104">
           <span className='aqua'>Github</span>
-          <span className='pink'>()</span>
+          <span className='red'>()</span>
           <span className='grey'>;</span>
         </a>
         <a href="https://www.linkedin.com/in/daniel-nguyen-047703117/">
           <span className='aqua'>LinkedIn</span>
-          <span className='pink'>()</span>
+          <span className='red'>()</span>
           <span className='grey'>;</span>
         </a>
         <a href="https://devpost.com/DanielNguyen?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav">
           <span className='aqua'>Devpost</span>
-          <span className='pink'>()</span>
+          <span className='red'>()</span>
           <span className='grey'>;</span>
         </a>
         <a href="">
           <span className='aqua'>Resume</span>
-          <span className='pink'>()</span>
+          <span className='red'>()</span>
           <span className='grey'>;</span>
         </a>
       </div>

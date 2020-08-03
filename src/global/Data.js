@@ -3,6 +3,7 @@ const data = {
     {
       title: 'Software Engineer',
       company: 'Fitzpo Inc.',
+      hot: true,
       current: true,
     },
     {

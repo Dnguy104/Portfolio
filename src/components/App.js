@@ -57,6 +57,12 @@ const App = (props) => {
     const jobs =  data.experience.map((job, i) => {
       return (
         <div className='item' key={i+'current'}>
+          {!!job.hot ?
+            <div className='hot' style={{
+              marginTop: '4px'
+            }}></div> :
+            null
+          }
           {job.current ?
             <p>
               <span className='aqua'>{job.title}</span> at <span className='red'>{job.company}</span>
@@ -96,7 +102,7 @@ const App = (props) => {
         <div key={i+'projects'} className='projects'>
           <a href={project.link}>
             {!!project.hot ?
-              <div className='hot'></div> :
+              <div className='hot' ></div> :
               null
             }
             <p>
@@ -191,6 +197,7 @@ const styledApp = styled(App)`
 
 
   .item {
+    position: relative;
     :hover {
       background-color: rgba(100,100,100, 0.5);
     }

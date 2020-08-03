@@ -29,7 +29,7 @@ const Header = (props) => {
           <span className='red'>()</span>
           <span className='grey'>;</span>
         </a>
-        <a href="">
+        <a href="https://drive.google.com/file/d/1nKfCifNvt2ak7sTXdPvZlnR8hQkNev26/view?usp=sharing">
           <span className='aqua'>Resume</span>
           <span className='red'>()</span>
           <span className='grey'>;</span>
